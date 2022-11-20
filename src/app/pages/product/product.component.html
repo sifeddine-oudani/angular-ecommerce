@@ -1,0 +1,17 @@
+<mat-drawer-container 
+[autosize]="true"
+class="min-h-full max-w-7xl mx-auto border-x" *ngIf="product">
+    <div class=" flex flex-row gap-5 p-6">
+        <div class="w-2/5">
+            <img [src]="product.image" class="w-full" />
+        </div>
+        <div class="w-3/5">
+            <h1>{{product.title}}</h1>
+            <span class="text-red-400">{{product.price | currency}}</span>
+            <p>{{product.description}}</p>
+            <button (click)="onAddToCart(product)">
+                Add to cart
+            </button>
+        </div>
+    </div>
+</mat-drawer-container>
